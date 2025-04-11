@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adya Das - Resume</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 20px;
+    }
+
+    .download-btn {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .download-btn button {
+      background-color: #2E8B57;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .download-btn button:hover {
+      background-color: #256d45;
+    }
+
+    .container {
+      max-width: 900px;
+      background: #fff;
+      margin: auto;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #2E8B57;
+      object-fit: cover;
+    }
+
+    .profile-details {
+      flex: 1;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #2E8B57;
+    }
+
+    h2 {
+      margin-top: 25px;
+      color: #2E8B57;
+      border-bottom: 2px solid #2E8B57;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    p {
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #2E8B57;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 15px;
+      border-collapse: collapse;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #2E8B57;
+      color: white;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 6px;
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 768px) {
+      .profile {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .profile img {
+        margin-bottom: 15px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      table, th, td {
+        font-size: 14px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+
+      .container {
+        padding: 15px;
+      }
+
+      .profile-details p, ul {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="download-btn">
+    <button onclick="downloadPDF()">Download Resume as PDF</button>
+  </div>
+
+  <div class="container" id="resume">
+    <div class="profile">
+      <img src="profileImg.jpeg" alt="Adya Das" />
+      <div class="profile-details">
+        <h1>Adya Das</h1>
+        <p>B.Tech CSE Student | Aspiring IT Professional</p>
+        <p><a href="mailto:adya.star20@email.com">adya.star20@email.com</a><br />
+        <a href="https://www.linkedin.com/in/adya-das-b01914275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn Profile</a></p>
+      </div>
+    </div>
+
+    <h2>About Me</h2>
+    <p>I am currently pursuing B.Tech in Computer Science and Engineering at Government Engineering College, Vaishali. I'm passionate about web development and aspire to become a successful IT employee. I enjoy exploring new places, creating Madhubani art, and engaging in digital creativity.</p>
+
+    <h2>Education</h2>
+    <table>
+      <tr>
+        <th>Degree</th>
+        <th>Institution</th>
+        <th>Board</th>
+        <th>Year</th>
+      </tr>
+      <tr>
+        <td>10th</td>
+        <td>Gyan Bharti Public School, Darbhanga</td>
+        <td>CBSE</td>
+        <td>2020</td>
+      </tr>
+      <tr>
+        <td>12th</td>
+        <td>+2 MPT Uchh Vidyalaya, Jhanjharpur</td>
+        <td>BSEB</td>
+        <td>2022</td>
+      </tr>
+      <tr>
+        <td>B.Tech (CSE)</td>
+        <td>Government Engineering College, Vaishali</td>
+        <td>BEU</td>
+        <td>2027 (Expected)</td>
+      </tr>
+    </table>
+
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Responsive Web Design</li>
+      <li>Python (Basics)</li>
+      <li>Content Creation & Vlogging</li>
+    </ul>
+
+    <h2>Strengths</h2>
+    <ul>
+      <li>Creative Thinking</li>
+      <li>Fast Learner</li>
+      <li>Team Collaboration</li>
+      <li>Effective Communication</li>
+    </ul>
+
+    <h2>Hobbies</h2>
+    <ul>
+      <li>Traveling</li>
+      <li>Creating Madhubani Paintings</li>
+      <li>Playing Badminton</li>
+      <li>Filming Vlogs</li>
+    </ul>
+  </div>
+
+  <script>
+    function downloadPDF() {
+      const element = document.getElementById('resume');
+      const opt = {
+        margin:       0.5,
+        filename:     'Adya_Das_Resume.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+      html2pdf().set(opt).from(element).save();
+    }
+  </script>
+
+</body>
+</html>
